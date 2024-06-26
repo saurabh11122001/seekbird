@@ -1,0 +1,18 @@
+<%- include('./partials/header') %>
+    <div class="w-full font-sans h-screen items-center justify-center flex px-20">
+        <div class="w-5/6 flex items-center justify-center h-screen">
+            <div class="w-96 rounded-md bg-gray-100 px-1">
+                <h4 class="text-2xl capitalize text-center mb-5 font-semibold">Admin Access</h4>
+                <form action="/owners/login" method="post">
+                    <input class="block bg-zinc-100 w-full outline-none px-3 py-2 border-[1px] rounded-md mb-3 border-zinc-200"
+                        type="email" placeholder="Email" name="email">
+                    <input class="block bg-zinc-100 w-full outline-none px-3 py-2 border-[1px] rounded-md mb-3 border-zinc-200"
+                        type="password" placeholder="Password" name="password">
+                        <div class="w-full flex items-center justify-center">
+                            <input class="px-5 cursor-pointer rounded-md py-2 mt-1 bg-blue-500 text-white" type="submit" value="Login">
+                        </div>                    
+                </form>
+            </div>
+        </div>
+    </div>
+    <%- include('./partials/footer') %>
