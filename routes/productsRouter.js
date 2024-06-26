@@ -45,7 +45,7 @@ router.get("/addtocart/:id",userMiddleware,async function(req,res){
     }
 })
 
-//delete product
+//delete product route
 
 router.get("/deleteproduct/:id",ownerMiddleware,async function (req,res) {
     try {
