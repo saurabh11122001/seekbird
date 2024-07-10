@@ -25,13 +25,7 @@ router.get("/createproducts",ownerMiddleware,(req,res)=>{
     res.render("createproducts",{success});
 })
 router.get("/cart",userMiddleware,async function(req,res){
-    let user=await userModel.findOne({email:req.user.email}).populate("cart")
-    let usercart=user.cart
-    let items=[]
-    for (let i=0;i<usercart.length;i++){
-        let product=await productModel.findOne({_id:usercart[i]});
-        items.push(product);
-    }
+    let items=await userModel.findOne({email:req.user.email}).populate("cart")
     res.render("cart",{items})
 })
 
